@@ -1,15 +1,10 @@
 function removeDuplicates(nums: number[]): number {
-    let unique: number[] = [];
+    let uniqueNumbers = new Set<number>(nums);
 
-    for (let i: number = 0; i < nums.length; i++) {
-        if (!unique.includes(nums[i])) {
-            unique.push(nums[i]);
-        }
-    }
-
-    unique.forEach((uniqueNumber: number, index: number) => {
-        nums[index] = uniqueNumber;
+    let i = 0;
+    uniqueNumbers.forEach((uniqueNumber: number) => {
+        nums[i++] = uniqueNumber;
     });
 
-    return unique.length;
+    return uniqueNumbers.size;
 }
