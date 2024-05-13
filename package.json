@@ -1,0 +1,25 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "This is me, trying to learn from leetcode. starting from the easiest questions first :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BcnChsBrgr/leetcode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BcnChsBrgr/leetcode/issues"
+  },
+  "homepage": "https://github.com/BcnChsBrgr/leetcode#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.2.0",
+    "eslint": "^8.57.0",
+    "globals": "^15.2.0",
+    "typescript-eslint": "^7.9.0"
+  }
+}
