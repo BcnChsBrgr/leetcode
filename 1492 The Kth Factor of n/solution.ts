@@ -7,5 +7,5 @@ function kthFactor(n: number, k: number): number {
         }
         if (index === k) return i;
     }
-    return k - index > 1 ? -1 : n;
+    return -1;
 }
