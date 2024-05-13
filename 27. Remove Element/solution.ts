@@ -1,15 +1,24 @@
 function removeElement(nums: number[], val: number): number {
-    let unique: number[] = [];
+    let startPos: number = 0,
+        endPos: number = nums.length - 1;
+    let retNum: number = nums.length;
 
-    for (let i: number = 0; i < nums.length; i++) {
-        if (nums[i] !== val) {
-            unique.push(nums[i]);
+    while (startPos <= endPos) {
+        if (nums[startPos] === val) {
+            if (nums[endPos] === val) {
+                endPos--;
+                retNum--;
+                continue;
+            } else {
+                nums[startPos] = nums[endPos];
+                nums[endPos] = -1;
+                endPos--;
+                retNum--;
+            }
         }
+        startPos++;
     }
-
-    unique.forEach((uniqueNumber: number, index: number) => {
-        nums[index] = uniqueNumber;
-    });
-
-    return unique.length;
+    return retNum;
 }
+const nums = [3, 2, 2, 3];
+console.log(removeElement(nums, 3));
